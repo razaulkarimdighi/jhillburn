@@ -19,7 +19,7 @@
     line-height: 26px;
     letter-spacing: 0.32px;
     text-decoration: none;
-    color: #1D1D1D;
+    color: var(--header-text);
 }
 .right-menu ul{
     justify-content: end;

@@ -8,7 +8,7 @@
                 {% assign menu1 = section.settings.menu_1%}
                 {% for link in linklists[menu1].links %}
                 <li class="link-menu">
-                    <a href="{{ link.url }}">{{ link.title }}</a>
+                    <a style="--header-text: {{ section.settings.header_text_color }};" href="{{ link.url }}">{{ link.title }}</a>
                 </li>
                 {% endfor %}
             </ul>
@@ -29,7 +29,7 @@
                     {% assign menu2 = section.settings.menu_2%}
                     {% for link in linklists[menu2].links %}
                     <li class="link-menu">
-                        <a href="{{ link.url }}">{{ link.title }}</a>
+                        <a href="{{ link.url }}" style="--header-text: {{ section.settings.header_text_color }};">{{ link.title }}</a>
                     </li>
                     {% endfor %}
                 </ul>
