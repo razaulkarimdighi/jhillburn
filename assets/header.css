@@ -5,12 +5,18 @@
     gap: 30px;
 }
 .left-menu ul, .right-menu ul{
-    font-size: 15.75;
+    /* font-size: 15.75;
     font-weight: 600;
     line-height: 26px;
     letter-spacing: 0.32px;
     text-decoration: none;
-    color: #1D1D1D;
+    color: #1D1D1D; */
+
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
 }
 
 .right-menu ul{
