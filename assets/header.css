@@ -4,11 +4,18 @@
     align-items: center;
     gap: 30px;
 }
-.header-container .left-menu{
+.left-menu ul, .right-menu ul{
     font-size: 15.75;
     font-weight: 600;
     line-height: 26px;
     letter-spacing: 0.32px;
     text-decoration: none;
     color: #1D1D1D;
+}
+
+.right-menu ul{
+    text-align: right;
+}
+.left-menu ul a, .right-menu ul a{
+    
 }
