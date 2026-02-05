@@ -22,7 +22,7 @@
     color: #1D1D1D;
 }
 .right-menu ul{
-    align-items: center;
+    text-align: right;
 }
 .logo img{
     width: 200px;
