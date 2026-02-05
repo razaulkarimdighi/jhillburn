@@ -32,3 +32,7 @@
     height: auto;
     object-fit: contain;
 }
+.custom-header{
+    padding: 15px 0;
+    background: #ffffff;
+}
