@@ -1,0 +1,61 @@
+<header class="custom-header">
+    <div class="page-width">
+        <div class="left-menu">
+            <ul>
+                {% assign menu1 = section.settings.menu_1%}
+                {% for link in linklists[menu1].links %}
+                <li class="link_menu">
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="/">
+                {% assign site_logo = section.settings.logo %}
+                {% if site_logo != blank %}
+                {{ site_logo | image_url: width: 300 | image_tag: alt:site_logo.alt }}
+                {% else %}
+                    {{ shop.name }}
+                {% endif %}
+            </a>
+        </div>
+        <div class="right-menu-with-icons">
+            <div class="right_menu">
+                <ul>
+                    {% assign menu2 = section.settings.menu_2%}
+                    {% for link in linklists[menu2].links %}
+                    <li class="link_menu">
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="header_icons_group">
+
+            </div>
+        </div>
+    </div>
+</header>
+
+{% schema %}
+{
+"name": "Custom Header",
+"settings": [
+{
+"type":"link_list" ,
+"id":"menu_1",
+"label": "Menu Left",
+},{
+"type": "image_picker",
+"id": "logo",
+"label":"Logo"
+},
+{
+"type":"link_list" ,
+"id":"menu_2",
+"label": "main-men",
+}
+]
+}
+{% endschema %}
