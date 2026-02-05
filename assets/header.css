@@ -34,5 +34,5 @@
 }
 .custom-header{
     padding: 15px 0;
-    background: #ffffff;
+    background-color: var(--header-bg);
 }

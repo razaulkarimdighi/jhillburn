@@ -1,6 +1,6 @@
 {{ 'header.css' |  asset_url |  stylesheet_tag }}
 
-<header class="custom-header">
+<header class="custom-header"  style="--header-bg: {{ section.settings.header_bg_color }};">
     <div class="page-width">
         <div class="header-container">
             <div class="left-menu">
@@ -59,6 +59,24 @@
 "type":"link_list" ,
 "id":"menu_2",
 "label": "Menu Right"
+},
+{
+    "type": "header",
+    "content": "Colors"
+},
+
+   { "type": "color",
+    "id": "header_bg_color",
+    "label": "Header Background Color",
+    "default":"#000000"
+}
+,
+{
+    "type": "color",
+    "id": "header_text_color",
+    "label": "Header Text Color",
+    "default": "#ffffff"
+
 }
 ]
 }
