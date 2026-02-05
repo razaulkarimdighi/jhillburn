@@ -8,7 +8,7 @@
                 {% assign menu1 = section.settings.menu_1%}
                 {% for link in linklists[menu1].links %}
                 <li class="link-menu">
-                    <a style="--header-text: {{ section.settings.header_text_color }};" href="{{ link.url }}">{{ link.title }}</a>
+                    <a href="{{ link.url }}" style="--header-text: {{ section.settings.header_text_color }};">{{ link.title }}</a>
                 </li>
                 {% endfor %}
             </ul>
