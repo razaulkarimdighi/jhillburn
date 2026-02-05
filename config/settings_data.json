@@ -143,6 +143,7 @@
         "type": "custom-header",
         "settings": {
           "menu_1": "main-menu",
+          "logo": "shopify://shop_images/logo.png",
           "menu_2": "main-menu-002"
         }
       }
