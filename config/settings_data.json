@@ -145,7 +145,7 @@
           "menu_1": "main-menu",
           "logo": "shopify://shop_images/logo-white.png",
           "menu_2": "main-menu-002",
-          "header_bg_color": "#f65656",
+          "header_bg_color": "#0d0303",
           "header_text_color": "#ffffff"
         }
       }
