@@ -33,6 +33,6 @@
     object-fit: contain;
 }
 .custom-header{
-    padding: var(--header-padding)px 0;
+    padding: var(--header-padding) 0;
     background-color: var(--header-bg);
 }
