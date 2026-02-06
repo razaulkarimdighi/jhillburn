@@ -1,43 +1,45 @@
-{{ 'header.css' |  asset_url |  stylesheet_tag }}
+{{ 'header.css' | asset_url | stylesheet_tag }}
 
-<header class="custom-header"  style="--header-bg: {{ section.settings.header_bg_color }};">
+<header class="custom-header" style="--header-bg: {{ section.settings.header_bg_color }};">
     <div class="page-width">
         <div class="header-container">
             <div class="left-menu">
-            <ul>
-                {% assign menu1 = section.settings.menu_1%}
-                {% for link in linklists[menu1].links %}
-                <li class="link-menu">
-                    <a href="{{ link.url }}" style="--header-text: {{ section.settings.header_text_color }};">{{ link.title }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="logo">
-            <a href="/">
-                {% assign site_logo = section.settings.logo %}
-                {% if site_logo != blank %}
-                {{ site_logo | image_url: width: 300 | image_tag: alt:site_logo.alt }}
-                {% else %}
-                    {{ shop.name }}
-                {% endif %}
-            </a>
-        </div>
-        <div class="right-menu-with-icons">
-            <div class="right-menu">
                 <ul>
-                    {% assign menu2 = section.settings.menu_2%}
-                    {% for link in linklists[menu2].links %}
+                    {% assign menu1 = section.settings.menu_1%}
+                    {% for link in linklists[menu1].links %}
                     <li class="link-menu">
-                        <a href="{{ link.url }}" style="--header-text: {{ section.settings.header_text_color }};">{{ link.title }}</a>
+                        <a href="{{ link.url }}" style="--header-text: {{ section.settings.header_text_color }};">{{
+                            link.title }}</a>
                     </li>
                     {% endfor %}
                 </ul>
             </div>
-            <div class="header_icons_group">
-
+            <div class="logo">
+                <a href="/">
+                    {% assign site_logo = section.settings.logo %}
+                    {% if site_logo != blank %}
+                    {{ site_logo | image_url: width: 300 | image_tag: alt:site_logo.alt }}
+                    {% else %}
+                    {{ shop.name }}
+                    {% endif %}
+                </a>
             </div>
-        </div>
+            <div class="right-menu-with-icons">
+                <div class="right-menu">
+                    <ul>
+                        {% assign menu2 = section.settings.menu_2%}
+                        {% for link in linklists[menu2].links %}
+                        <li class="link-menu">
+                            <a href="{{ link.url }}" style="--header-text: {{ section.settings.header_text_color }};">{{
+                                link.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="header_icons_group">
+
+                </div>
+            </div>
         </div>
     </div>
 </header>
@@ -61,21 +63,31 @@
 "label": "Menu Right"
 },
 {
-    "type": "header",
-    "content": "Colors"
+"type": "header",
+"content": "Colors"
+},
+{
+"type": "range",
+"id": "header_padding",
+"label": "Heading Padding",
+"min": 10,
+"max": 30,
+"step": 2,
+"unit": "px",
+"default": 20
 },
 
-   { "type": "color",
-    "id": "header_bg_color",
-    "label": "Header Background Color",
-    "default":"#000000"
+{ "type": "color",
+"id": "header_bg_color",
+"label": "Header Background Color",
+"default":"#000000"
 }
 ,
 {
-    "type": "color",
-    "id": "header_text_color",
-    "label": "Header Text Color",
-    "default": "#ffffff"
+"type": "color",
+"id": "header_text_color",
+"label": "Header Text Color",
+"default": "#ffffff"
 
 }
 ]
