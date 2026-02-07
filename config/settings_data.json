@@ -146,7 +146,7 @@
           "logo": "shopify://shop_images/logo-white.png",
           "menu_2": "main-menu-002",
           "header_padding": 10,
-          "header_bg_color": "#0d0303",
+          "header_bg_color": "#838383",
           "header_text_color": "#ffffff"
         }
       }
