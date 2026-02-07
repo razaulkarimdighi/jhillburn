@@ -36,3 +36,6 @@
     padding: var(--header-padding) 0;
     background-color: var(--header-bg);
 }
+.right-menu-with-icons{
+    display: flex;
+}
